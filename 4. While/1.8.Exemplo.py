@@ -12,6 +12,8 @@ os.system("cls || clear")
 
 QUANTIDADE_NOTAS = 3
 soma = 0
+contador=0
+continua='N'
 
 for i in range(QUANTIDADE_NOTAS): 
     while True:
@@ -21,6 +23,18 @@ for i in range(QUANTIDADE_NOTAS):
         else:
             soma +=nota
             break
+
+while continua == 'N':
+    # comandos a serem repetidos
+    print("Repetindo.....")
+    contador +=1
+    # contador = contador + 1
+    continua = input("Tecle 'N' se desejar inserir mais uma nota:").strip().lower()
+
+    if contador =='N':
+        print("A nota NAO foi repetida.")
+else:
+    print(f"O Nota foi repetida {contador} vezes")
 
 media = soma /QUANTIDADE_NOTAS
     
