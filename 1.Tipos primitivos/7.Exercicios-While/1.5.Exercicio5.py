@@ -13,6 +13,20 @@ Dica: Use uma variável para armazenar o código correto e um contador para as t
 import os
 os.system("cls || clear")
 
-contador=0
+codigo_correto = "PROMO2024"
 
-codigo = float(input("Insira um código em promoção: "))
+maximo_tentativas = 3
+tentativas = 0
+
+while tentativas < maximo_tentativas:
+
+    codigo = input("Insira o código de promoção: ")
+    if codigo == codigo_correto:
+        print("Código aceito! Você obteve um desconto de 10%.")
+        break 
+    else:
+        tentativas += 1
+        if tentativas < maximo_tentativas:
+            print(f"Código incorreto. Você ainda tem {maximo_tentativas - tentativas} tentativas.")
+        else:
+            print("Código inválido. Você usou todas as suas tentativas.")
