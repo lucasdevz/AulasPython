@@ -13,7 +13,7 @@ O objetivo é criar um algoritmo que leia 5 números inteiros e, em seguida, mos
 import os
 os.system("cls || clear")
 
-# variaveis
+# variaveis e contante
 
 lista_numero=[]
 QUANTIDADE=5
