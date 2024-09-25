@@ -5,17 +5,30 @@ print("""
 ℝ𝕖𝕤𝕥𝕒𝕦𝕣𝕒𝕟𝕥𝕖 𝕤𝕖𝕟𝕒𝕚
 """)
 
-print('1. Pizza')
-print('2. Macarrão')
-print('3. Feijoada')
-print('4. Suchi')
-print('5. Salada')
-print('6. Churrasco')
-print('7. Pastel\n')
+opcoes = {
+    1: "Lasanha",
+    2: "Pizza",
+    3: "Sushi",
+    4: "Feijoada",
+    5: "Pastel",
+    6: "Bolo",
+    7: "Pudim"
+}
 
-opcao_escolhida = input('Escolha uma opção: ')
-print(f'Você escolheu a opção {opcao_escolhida}')
+opcao_escolhida = 0
 
+print("Menu de Pratos:")
+for opcao_escolhida, nome in opcoes.items():
+    print(f"{opcao_escolhida}: {nome}")
 
-
+while True:
+    try:
+        opcao_escolhida = int(input("Digite o código do prato desejado: "))
+        if opcao_escolhida in opcoes:
+            print(f"Você selecionou: {opcoes[opcao_escolhida]}")
+            break
+        else:
+            print("Código inválido! Por favor, tente novamente.")
+    except ValueError:
+        print("Entrada inválida! Por favor, insira um número.")
 
