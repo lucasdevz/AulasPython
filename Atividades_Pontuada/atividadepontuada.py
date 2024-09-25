@@ -6,6 +6,7 @@ print("""
 """)
 
 opcoes = {
+
     1: "Lasanha",
     2: "Pizza",
     3: "Sushi",
@@ -18,6 +19,7 @@ opcoes = {
 opcao_escolhida = 0
 
 print("Menu de Pratos:")
+
 for opcao_escolhida, nome in opcoes.items():
     print(f"{opcao_escolhida}: {nome}")
 
@@ -28,7 +30,7 @@ while True:
             print(f"Você selecionou: {opcoes[opcao_escolhida]}")
             break
         else:
-            print("Código inválido! Por favor, tente novamente.")
+            print(f"Código inválido! Por favor, tente novamente.")
     except ValueError:
-        print("Entrada inválida! Por favor, insira um número.")
+        print(f"Entrada inválida! Por favor, insira um número.")
 
